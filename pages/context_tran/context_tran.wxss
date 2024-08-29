@@ -1,0 +1,25 @@
+
+.custom-field {
+  width: 100%; /* 可以设置为具体的像素值或者百分比 */
+  height: 500px; /* 根据需要调整高度 */
+  padding: 20px; /* 调整内边距 */
+}
+/* 调整 van-cell 的样式以适应 van-field */
+van-cell {
+  padding: 0; /* 可以根据需要调整 */
+}
+
+/* 容器样式，使用 Flexbox 布局使按钮居中 */
+.button-container {
+  display: flex;           /* 启用 Flexbox 布局 */
+  justify-content: center; /* 水平居中 */
+  align-items: center;     /* 垂直居中 */
+  height: 100%;            /* 容器高度设置为 100% */
+  /* 可选：如果需要容器有特定的垂直间距，可以设置 padding-top 和 padding-bottom */
+}
+
+/* 按钮样式，可根据需要添加额外的样式 */
+.centered-button {
+  margin-top: 30px;
+  margin-bottom: 100px;
+}

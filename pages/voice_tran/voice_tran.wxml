@@ -1,0 +1,35 @@
+<!--pages/voice_tran/voice_tran.wxml-->
+
+<van-cell-group>
+  <van-cell>
+    <van-field
+      class="custom-field"
+      value="{{ value }}"
+      placeholder="语音待识别..."
+      border="{{ false }}"
+      bind:change="onChange"
+    />
+  
+    </van-cell>
+  </van-cell-group>
+
+
+<view class="button-container">
+  <view class="button-with-text">
+    <van-button class="custom-button" round color="#1989fa">中文</van-button>
+    <text class="button-caption">长按说话</text>
+  </view>
+  <view class="button-with-text">
+    <van-button class="custom-button" round color="#1989fa" plain>EN</van-button>
+    <text class="button-caption">Hold To Talk</text>
+  </view>
+</view>
+
+
+
+<van-tabbar active="{{ active }}" bind:change="onChange">
+  <van-tabbar-item name="home" icon="home-o">对话翻译</van-tabbar-item>
+  <van-tabbar-item name="search" icon="search">文本翻译</van-tabbar-item>
+  <van-tabbar-item name="photo" icon="photo-o">传图翻译</van-tabbar-item>
+  <van-tabbar-item name="user" icon="friends-o">个人中心</van-tabbar-item>
+</van-tabbar>

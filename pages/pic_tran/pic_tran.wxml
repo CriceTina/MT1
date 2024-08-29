@@ -1,0 +1,18 @@
+<!--pages/pic_tran/pic_tran.wxml-->
+
+<van-dropdown-menu>
+  <van-dropdown-item value="{{ value1 }}" options="{{ option1 }}" />
+  <van-dropdown-item value="{{ value2 }}" options="{{ option2 }}" />
+</van-dropdown-menu>
+
+<van-empty description="支持pdf/word/ppt">
+  <van-button class="custom-button" round color="#1989fa">上传文档</van-button>
+</van-empty>
+
+
+<van-tabbar active="{{ active }}" bind:change="onChange">
+  <van-tabbar-item name="home" icon="home-o">对话翻译</van-tabbar-item>
+  <van-tabbar-item name="search" icon="search">文本翻译</van-tabbar-item>
+  <van-tabbar-item name="photo" icon="photo-o">文件翻译</van-tabbar-item>
+  <van-tabbar-item name="user" icon="friends-o">个人中心</van-tabbar-item>
+</van-tabbar>

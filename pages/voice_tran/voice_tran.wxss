@@ -1,0 +1,42 @@
+/* pages/voice_tran/voice_tran.wxss */
+
+.custom-field {
+  margin-top: 40px;
+  width: 100%; /* 可以设置为具体的像素值或者百分比 */
+  height: 700px; /* 根据需要调整高度 */
+  padding: 20px; /* 调整内边距 */
+}
+/* 调整 van-cell 的样式以适应 van-field */
+van-cell-group {
+  height: 700px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+}
+/* 按钮和说明文字的容器样式 */
+.button-with-text {
+  display: flex;
+  flex-direction: column; /* 设置主轴为垂直方向 */
+  align-items: center; /* 水平居中 */
+  margin-bottom: 10px; /* 添加底部外边距 */
+}
+
+/* 为按钮添加外边距 */
+.van-button {
+  margin-top: 40px;
+  margin-left: 40px;
+  margin-right: 40px;
+  width: 120px;
+}
+.button-caption {
+  margin: 30px; /* 左右外边距 */
+  margin-top: 5px; /* 添加顶部外边距 */
+  font-size: 12px; /* 设置说明文字大小 */
+  color: rgb(151, 148, 148); /* 设置说明文字颜色 */
+}
+

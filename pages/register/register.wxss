@@ -1,0 +1,18 @@
+/* pages/register/register.wxss */
+/* page.wxss */
+/* 容器样式，使用 Flexbox 布局使按钮居中 */
+.button-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  width: 100%; /* 容器宽度为 100% */
+  height: 100%; /* 容器高度为 100% */
+}
+
+/* 自定义按钮样式 */
+.van-button {
+  width: 150px;
+ 
+}
+
