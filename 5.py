@@ -36,7 +36,7 @@ class TranslationDataset(Dataset):
         target_text = item['output']
 
         # 获取相应的任务前缀
-        target_language = 'en'  # 假设每个item都有'language'字段，用于标识目标语言
+        target_language = item['language']  # 假设每个item都有'language'字段，用于标识目标语言
         task_prefix = task_prefixes[target_language]
 
         # 准备输入数据，添加任务标识符
@@ -68,8 +68,8 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model.to(device)
 
 # 创建数据集实例
-train_dataset = TranslationDataset(tokenizer=tokenizer, file_path='data/train.json')
-eval_dataset = TranslationDataset(tokenizer=tokenizer, file_path='data/test.json')
+train_dataset = TranslationDataset(tokenizer=tokenizer, file_path='data_2/train_3.json')
+eval_dataset = TranslationDataset(tokenizer=tokenizer, file_path='data_2/test_3.json')
 # 定义训练参数
 training_args = TrainingArguments(
     output_dir='./results',
