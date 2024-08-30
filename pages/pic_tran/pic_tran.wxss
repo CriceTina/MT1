@@ -1,0 +1,6 @@
+/* pages/pic_tran/pic_tran.wxss */
+  .bottom-button {
+    width: 200px;
+    height: 40px;
+  }
+

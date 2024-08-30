@@ -1,0 +1,9 @@
+<!--pages/register/register.wxml-->
+<text></text>
+<van-cell-group inset>
+  <van-cell title="用户名" value="请输入用户名" />
+  <van-cell title="密码" value="请输入密码"  />
+</van-cell-group>
+<view class="button-container">
+  <van-button round plain type="info"  style="text-align:center"> 登录 </van-button>
+</view>

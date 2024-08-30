@@ -1,0 +1,49 @@
+<!--pages/context_tran/context_tran.wxml-->
+<van-nav-bar
+  title="文本翻译"
+  left-text=""
+  
+  right-text=""
+  left-arrow
+  bind:click-left="onClickLeft"
+  bind:click-right="onClickRight"
+/>
+<van-dropdown-menu>
+  <van-dropdown-item value="{{ value1 }}" options="{{ option1 }}" />
+  <van-dropdown-item value="{{ value2 }}" options="{{ option2 }}" />
+</van-dropdown-menu>
+
+
+<van-cell-group>
+  <van-cell>
+    <van-field
+      class="custom-field"
+      value="{{ value }}"
+      placeholder="请输入需要翻译的文本"
+      border="{{ false }}"
+      bind:change="onChange"
+    />
+  
+    </van-cell>
+  </van-cell-group>
+
+
+  <view class="button-container">
+  <van-button round type="info" class="centered-button">确定翻译</van-button>
+</view>
+
+<van-grid direction="horizontal" column-num="3">
+  <van-grid-item icon="down" text="导出文件" />
+  <van-grid-item icon="records-o" text="复制内容" />
+  <van-grid-item icon="photo-o" text="左右对比" />
+</van-grid>
+
+
+
+
+<van-tabbar active="{{ active }}" bind:change="onChange">
+  <van-tabbar-item name="home" icon="home-o">对话翻译</van-tabbar-item>
+  <van-tabbar-item name="search" icon="search">文本翻译</van-tabbar-item>
+  <van-tabbar-item name="photo" icon="photo-o">传图翻译</van-tabbar-item>
+  <van-tabbar-item name="user" icon="friends-o">个人中心</van-tabbar-item>
+</van-tabbar>
