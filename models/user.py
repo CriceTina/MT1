@@ -17,7 +17,7 @@ class User(db.Model):
 
             'user_id': self.user_id,
             'username': self.username,
-            'password':self.password,
+            'password': self.password,
             'registration_time': self.registration_time,
             'last_login_time': self.last_login_time,
             'preferred_language_id': self.preferred_language_id,
