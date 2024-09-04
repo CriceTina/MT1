@@ -1,6 +1,8 @@
 from models.administrator import db
 from models.administrator import Administrator
 from flask import jsonify
+from models.user import db
+from models.user import User
 
 
 def admin_login(adminName, adminPassword):
@@ -27,3 +29,16 @@ def admin_login(adminName, adminPassword):
         "message": "登录成功",
         "data": admin_dict
     })
+
+
+def get_all_users():
+    # 查询所有用户
+    users = User.query.all()
+    users_info = [{"id": user.user_id,
+                   "username": user.username,
+                   'registration_time': user.registration_time,
+                   'last_login_time': user.last_login_time,
+                   'preferred_language_id': user.preferred_language_id,
+                   'primary_language_id': user.primary_language_id
+                   } for user in users]
+    return jsonify(users_info), 200
